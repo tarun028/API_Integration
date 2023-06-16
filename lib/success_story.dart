@@ -5,8 +5,10 @@ import 'success_story_details.dart';
 class SuccessStory {
   final String title;
   final String description;
+  final String url;
+  SuccessStory({required this.title, required this.description,required this.url,});
 
-  SuccessStory({required this.title, required this.description});
+  get webViewController => null;
 }
 
 class SuccessStoryPage extends StatefulWidget {

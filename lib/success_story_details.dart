@@ -34,7 +34,7 @@ class SuccessStoryDetailsPage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => WebViewPage(url: successStory.title),
+                    builder: (context) => WebViewPage(url: successStory.url),
                   ),
                 );
               },

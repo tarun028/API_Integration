@@ -10,7 +10,7 @@ class WebViewPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Success Story'),
+        title: Text('Web View'),
       ),
       body: WebView(
         initialUrl: url,
