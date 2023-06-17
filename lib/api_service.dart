@@ -9,11 +9,11 @@ class ApiService {
     final response = await http.get(Uri.parse('$baseUrl?PageNumber=1'));
 
 
-    if (response.statusCode == 200) {
+    if (response.statusCode == 400) {
       final jsonList = json.decode(response.body) as List<dynamic>;
       return jsonList
           .map((jsonData) =>
-              SuccessStory(title: jsonData['title'], description: jsonData['description'], url: ''))
+              SuccessStory(title: jsonData['title'], description: jsonData['description'], url: 'https://tools.ietf.org/html/rfc7231#section-6.5.1'))
           .toList();
     } else {
       throw Exception('Failed to fetch success stories');
